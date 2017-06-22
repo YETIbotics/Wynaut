@@ -47,10 +47,10 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <ForcedIncludeFiles>%(ForcedIncludeFiles)</ForcedIncludeFiles>
-      <IgnoreStandardIncludePath>true</IgnoreStandardIncludePath>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\..\Program Files (x86)\Arduino\hardware\arduino\avr\libraries\SPI\src;$(ProjectDir)..\..\..\..\Program Files (x86)\Arduino\libraries;$(ProjectDir)..\..\..\..\Program Files (x86)\Arduino\hardware\arduino\avr\libraries;$(ProjectDir)..\..\..\..\Users\Jeremy\Documents\Arduino\libraries;$(ProjectDir)..\..\..\..\Program Files (x86)\Arduino\hardware\arduino\avr\cores\arduino;$(ProjectDir)..\..\..\..\Program Files (x86)\Arduino\hardware\arduino\avr\variants\mega;$(ProjectDir)..\Wynaut;$(ProjectDir)..\..\WynautOLD;$(ProjectDir)..\..\..\..\Program Files (x86)\Arduino\hardware\tools\avr\avr\include\;$(ProjectDir)..\..\..\..\Program Files (x86)\Arduino\hardware\tools\avr\avr\include\avr\;$(ProjectDir)..\..\..\..\Program Files (x86)\Arduino\hardware\tools\avr\lib\gcc\avr\4.8.1\include;$(ProjectDir)..\..\..\..\Program Files (x86)\Arduino\hardware\tools\avr\lib\gcc\avr\4.9.2\include;$(ProjectDir)..\..\..\..\Program Files (x86)\Arduino\hardware\tools\avr\lib\gcc\avr\4.9.3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ProjectDir)__vm\.Wynaut.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <IgnoreStandardIncludePath>false</IgnoreStandardIncludePath>
+      <PreprocessorDefinitions>__AVR_ATmega2560__;_VMDEBUG=1;F_CPU=16000000L;ARDUINO=10803;ARDUINO_AVR_ADK;ARDUINO_ARCH_AVR;__cplusplus=201103L;_VMICRO_INTELLISENSE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -77,9 +77,103 @@
     <DebuggerFlavor>VisualMicroDebugger</DebuggerFlavor>
   </PropertyGroup>
   <ItemGroup>
+    <None Include="..\..\WynautOLD\.gitattributes" />
+    <None Include="..\..\WynautOLD\library.json" />
+    <None Include="..\..\WynautOLD\library.properties" />
+    <None Include="..\..\WynautOLD\README.md" />
+    <None Include="..\..\WynautOLD\WiiCameraReadme.md" />
     <None Include="Wynaut.ino">
       <FileType>CppCode</FileType>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\WynautOLD\address.h" />
+    <ClInclude Include="..\..\WynautOLD\adk.h" />
+    <ClInclude Include="..\..\WynautOLD\avrpins.h" />
+    <ClInclude Include="..\..\WynautOLD\BTD.h" />
+    <ClInclude Include="..\..\WynautOLD\BTHID.h" />
+    <ClInclude Include="..\..\WynautOLD\cdcacm.h" />
+    <ClInclude Include="..\..\WynautOLD\cdcftdi.h" />
+    <ClInclude Include="..\..\WynautOLD\cdcprolific.h" />
+    <ClInclude Include="..\..\WynautOLD\cdc_XR21B1411.h" />
+    <ClInclude Include="..\..\WynautOLD\confdescparser.h" />
+    <ClInclude Include="..\..\WynautOLD\controllerEnums.h" />
+    <ClInclude Include="..\..\WynautOLD\hexdump.h" />
+    <ClInclude Include="..\..\WynautOLD\hidboot.h" />
+    <ClInclude Include="..\..\WynautOLD\hidcomposite.h" />
+    <ClInclude Include="..\..\WynautOLD\hidescriptorparser.h" />
+    <ClInclude Include="..\..\WynautOLD\hiduniversal.h" />
+    <ClInclude Include="..\..\WynautOLD\hidusagestr.h" />
+    <ClInclude Include="..\..\WynautOLD\macros.h" />
+    <ClInclude Include="..\..\WynautOLD\masstorage.h" />
+    <ClInclude Include="..\..\WynautOLD\max3421e.h" />
+    <ClInclude Include="..\..\WynautOLD\max_LCD.h" />
+    <ClInclude Include="..\..\WynautOLD\MDD10A.h" />
+    <ClInclude Include="..\..\WynautOLD\message.h" />
+    <ClInclude Include="..\..\WynautOLD\parsetools.h" />
+    <ClInclude Include="..\..\WynautOLD\printhex.h" />
+    <ClInclude Include="..\..\WynautOLD\PS3BT.h" />
+    <ClInclude Include="..\..\WynautOLD\PS3Enums.h" />
+    <ClInclude Include="..\..\WynautOLD\PS3USB.h" />
+    <ClInclude Include="..\..\WynautOLD\PS4BT.h" />
+    <ClInclude Include="..\..\WynautOLD\PS4Parser.h" />
+    <ClInclude Include="..\..\WynautOLD\PS4USB.h" />
+    <ClInclude Include="..\..\WynautOLD\PSBuzz.h" />
+    <ClInclude Include="..\..\WynautOLD\settings.h" />
+    <ClInclude Include="..\..\WynautOLD\sink_parser.h" />
+    <ClInclude Include="..\..\WynautOLD\SPP.h" />
+    <ClInclude Include="..\..\WynautOLD\Usb.h" />
+    <ClInclude Include="..\..\WynautOLD\UsbCore.h" />
+    <ClInclude Include="..\..\WynautOLD\usbhid.h" />
+    <ClInclude Include="..\..\WynautOLD\usbhost.h" />
+    <ClInclude Include="..\..\WynautOLD\usbhub.h" />
+    <ClInclude Include="..\..\WynautOLD\usbh_midi.h" />
+    <ClInclude Include="..\..\WynautOLD\usb_ch9.h" />
+    <ClInclude Include="..\..\WynautOLD\version_helper.h" />
+    <ClInclude Include="..\..\WynautOLD\Wii.h" />
+    <ClInclude Include="..\..\WynautOLD\xboxEnums.h" />
+    <ClInclude Include="..\..\WynautOLD\XBOXOLD.h" />
+    <ClInclude Include="..\..\WynautOLD\XBOXONE.h" />
+    <ClInclude Include="..\..\WynautOLD\XBOXRECV.h" />
+    <ClInclude Include="..\..\WynautOLD\XBOXUSB.h" />
+    <ClInclude Include="__vm\.Wynaut.vsarduino.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\WynautOLD\adk.cpp" />
+    <ClCompile Include="..\..\WynautOLD\BTD.cpp" />
+    <ClCompile Include="..\..\WynautOLD\BTHID.cpp" />
+    <ClCompile Include="..\..\WynautOLD\cdcacm.cpp" />
+    <ClCompile Include="..\..\WynautOLD\cdcftdi.cpp" />
+    <ClCompile Include="..\..\WynautOLD\cdcprolific.cpp" />
+    <ClCompile Include="..\..\WynautOLD\cdc_XR21B1411.cpp" />
+    <ClCompile Include="..\..\WynautOLD\hidboot.cpp" />
+    <ClCompile Include="..\..\WynautOLD\hidcomposite.cpp" />
+    <ClCompile Include="..\..\WynautOLD\hidescriptorparser.cpp" />
+    <ClCompile Include="..\..\WynautOLD\hiduniversal.cpp" />
+    <ClCompile Include="..\..\WynautOLD\hidusagetitlearrays.cpp" />
+    <ClCompile Include="..\..\WynautOLD\masstorage.cpp" />
+    <ClCompile Include="..\..\WynautOLD\max_LCD.cpp" />
+    <ClCompile Include="..\..\WynautOLD\MDD10A.cpp" />
+    <ClCompile Include="..\..\WynautOLD\message.cpp" />
+    <ClCompile Include="..\..\WynautOLD\parsetools.cpp" />
+    <ClCompile Include="..\..\WynautOLD\PS3BT.cpp" />
+    <ClCompile Include="..\..\WynautOLD\PS3USB.cpp" />
+    <ClCompile Include="..\..\WynautOLD\PS4Parser.cpp" />
+    <ClCompile Include="..\..\WynautOLD\PSBuzz.cpp" />
+    <ClCompile Include="..\..\WynautOLD\SPP.cpp" />
+    <ClCompile Include="..\..\WynautOLD\Usb.cpp" />
+    <ClCompile Include="..\..\WynautOLD\usbhid.cpp" />
+    <ClCompile Include="..\..\WynautOLD\usbhub.cpp" />
+    <ClCompile Include="..\..\WynautOLD\usbh_midi.cpp" />
+    <ClCompile Include="..\..\WynautOLD\Wii.cpp" />
+    <ClCompile Include="..\..\WynautOLD\XBOXOLD.cpp" />
+    <ClCompile Include="..\..\WynautOLD\XBOXONE.cpp" />
+    <ClCompile Include="..\..\WynautOLD\XBOXRECV.cpp" />
+    <ClCompile Include="..\..\WynautOLD\XBOXUSB.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\WynautOLD\gpl2.txt" />
+    <Text Include="..\..\WynautOLD\keywords.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
